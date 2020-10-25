@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'leboss',
+	'hostname' => 'ecoleorgew241.mysql.db',
+	'username' => 'ecoleorgew241',
 	'password' => 'business@ecole241',
-	'database' => 'ecole241business',
+	'database' => 'Paradoxe2020',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
