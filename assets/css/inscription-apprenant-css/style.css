@@ -2,9 +2,10 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'montserrat', sans-serif;
-	background-image: url("../../img/inscription-apprenant-img/fond.png");
-    background-size: cover;
-    background-position: center;
+	background-image: url("../../img/img-apprenants/fond.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+    /* background-position: center; */
 	color: #007fff;	
 }
 
@@ -18,6 +19,10 @@ main h2{
 	font-size: 2em;
 	text-align: center;
 	color: #000;
+	display: flex;
+	flex-direction: column;
+	line-height: 5px;
+	margin-bottom: 5%;
 }
 
 
@@ -69,6 +74,26 @@ main .bloc_mail, .bloc_sexe,
 	padding-top: 5px;
 }
 
+.commercial_form input {
+    outline: none;
+}
+
+/* .commercial_form input::placeholder {
+    color: rgba(0,171,225,0.5)
+}
+
+.commercial_form textarea::placeholder {
+    color: rgba(0,171,225,0.5)
+}
+
+.commercial_form input:focus {
+    box-shadow: 0px 0px 3px #229BFF;
+}
+
+.commercial_form textarea:focus {
+    box-shadow: 0px 0px 3px #229BFF;
+} */
+
 main .bloc input[type="texte"],
 input[type="password"], 
 input[type="e-mail"],
@@ -81,7 +106,6 @@ input[type="tel"]{
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	font-size: 20px;
-	color: #ccc;
 }
 
 main .bloc input[type="date"]{
@@ -95,17 +119,17 @@ main .bloc input[type="date"]{
 }
 
 
-main .bloc input[type="password"]{
-	background-image: url(../../img/inscription-apprenant-img/visible_eye.png);
+/* main .bloc input[type="password"]{
+	background-image: url("../../img/img-apprenants/visible_eye.png");
 	background-repeat: no-repeat;
 	background-size:20px ;
 	background-position: 98%;
 	border: 1.5px solid #ccc; 
-}
+} */
 
 .commercial_form textarea {
     outline: none;
-font-family: 'montserrat', sans-serif;
+	font-family: 'montserrat', sans-serif;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 7px;
@@ -126,18 +150,20 @@ main .btnEnvoi input[type="submit"]{
 	width: 150px;
 	border-radius: 20px;
 	border: none;
-	background-color: #007fff;
+	background: linear-gradient(to right, #007fff, #229bff);
 	color: #fff;
 }
 
 main input[type=submit]:hover{
 	box-shadow: 0px 0px 10px #007fff;
+	box-shadow: 0 0 3px 0 #000;
     transition: 400ms ease-in-out;
 }
 
 /***************PETITS ÉCRANS****************/
 
 @media (max-width: 640px) {
+
 main h2{
 	font-size: 2em;
 	text-align: center;
