@@ -54,7 +54,7 @@ class Commercial_model extends CI_Model
 
     public function supprimer_commercial($params)
     {
-        $this->nom_prenom = $params['nom_prenom']; // please read the below note
+        $this->nom_prenom = $params['nom_prenom'];
         $this->num_tel    = $params['num_tel'];
         $this->num_what   = $params['num_what'];
         $this->email      = $params['email'];
