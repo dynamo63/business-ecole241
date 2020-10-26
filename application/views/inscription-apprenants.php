@@ -12,7 +12,7 @@
 	<main>
 		
 		<h2>
-			<span><img src="../../assets/img/img-apprenants/blue.png" width="15%" alt=""></span>
+			<span><img src="<?=base_url()?>assets/img/img-apprenants/blue.png" width="15%" alt=""></span>
 			<span>Inscription</span>
 		 </h2>
 		<form class="commercial_form" action="traitement/traitement.php" method="GET">
