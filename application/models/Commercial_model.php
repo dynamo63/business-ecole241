@@ -70,7 +70,8 @@ class Commercial_model extends CI_Model
     {
         $this->nom_user   = $params['nom_user'];
         $this->mot_passe  = $params['mot_passe'];
-        $query = $this->db->get_where('mytable', array('nom_user' => $params['nom_user'] , 'nom_user' => $params['mot_passe']));
+        $query = $this->db->get_where('commercial', array('nom_user' => $params['nom_user'] , 'mot_passe' => $params['mot_passe']));
+       
         return $query->result();
     }
 
