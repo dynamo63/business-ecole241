@@ -21,7 +21,7 @@ class Inscription_model extends CI_Model
 
     public function __construct()
     {
-        $this->load->database();
+        $this->load->database('local');
     }
 
     public function selectionner_tout()
@@ -44,7 +44,7 @@ class Inscription_model extends CI_Model
         $this->paye          = $params['paye'];
         $this->horaire       = $params['horaire'];
 
-        $this->db->insert('inscription', $this);
+        return $this->db->insert('inscription', $this);
     }
 
     public function modifier($params)

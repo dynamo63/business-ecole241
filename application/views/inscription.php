@@ -11,7 +11,7 @@
 <body>
 	<main>
 		<h2>Inscription</h2>
-		<form class="commercial_form" action="traitement/traitement.php" method="GET">
+		<form class="commercial_form" action="<?= site_url('inscription/ajouter') ?>" method="POST">
 			<div class="bloc">
 				<div class="blocnomprenom">
 					<div class="bloc_nom">
@@ -27,25 +27,19 @@
 				
 				<div class="bloc_mail">
 					<label  for="mail">Votre adresse e-mail:</label>
-					<input placeholder="Exemple: moussouvalbus@gmail.com"   type="e-mail" id="mail" name="mail">
+					<input placeholder="Exemple: moussouvalbus@gmail.com"   type="e-mail" id="mail" name="email">
 				</div>
 
 				<div class="bloc_sexe">
 					<p>Votre sexe:</p>
-					<div><input type="radio" name="genre" id="h"><label for="h">Homme</label></div>
-					<div><input type="radio" name="genre" id="f"><label for="f">Femme</label></div>
+					<div><input type="radio" name="genre" value="H" checked id="h"><label for="h">Homme</label></div>
+					<div><input type="radio" name="genre" value="F" id="f"><label for="f">Femme</label></div>
 				</div>
 
 				<div class="bloc_birthdate">
-					<label for="age">Date de naissance:</label>
-					<input type="date" id="age" name="age">
+					<label for="date_n">Date de naissance:</label>
+					<input type="date" id="date_n" name="date_n">
 				</div>
-
-				<div class="bloc_mdpasse">
-					<label for="motdepasse">Mot de passe:</label>
-					<input placeholder="Choisissez en un difficile" type="password" id="motdepasse" name="motDePasse">
-				</div>
-
 
 				<div class="bloc_telephone">
 					<label for="telephone">Numéro de téléphone:</label>
@@ -59,14 +53,14 @@
 
 				<div class="bloc_attentes">
 					<label for="attentes">Quelles sont vos attentes vis-à-vis de la formation?</label>
-					<textarea placeholder="Allez, dites nous tout" name="" id="attentes" cols="20" rows="10"></textarea>
+					<textarea placeholder="Allez, dites nous tout" name="attentes" id="attentes" cols="20" rows="10"></textarea>
 					<!-- <input  type="texte" id="attentes" name="objectif" > -->
 				</div>
 
 				<div class="bloc_periode">
 					<label for="periode">Quelle période choisirez-vous pour la formation?</label><br>
-					<div><input type="radio" name="heure" id="journe"><label for="journe">Journée</label></div>
-					<div><input type="radio" name="heure" id="soire"><label for="soire">Soirée</label></div>
+					<div><input type="radio" name="periode" id="journe"><label for="journe">Journée</label></div>
+					<div><input type="radio" name="periode" id="midi"><label for="midi">Après-midi</label></div>
 				</div>	
 			</div>
 			<div class="btnEnvoi"><input class="last_1" type="submit" value="Envoyer"></div>

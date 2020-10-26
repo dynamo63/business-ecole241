@@ -3,7 +3,7 @@
 <head>
 	<title>Formulaire d'inscription</title>
 	<meta name="viewport" content="width=device-width, initial-1.0">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/inscription-apprenants-css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/inscription-apprenants-css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
 
