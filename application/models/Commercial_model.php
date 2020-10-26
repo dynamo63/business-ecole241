@@ -20,7 +20,7 @@ class Commercial_model extends CI_Model
 
     public function tous_les_commerciaux()
     {
-        $query = $this->db->get('commercial', );
+        $query = $this->db->get('ressource');
         return $query->result();
     }
 
@@ -35,7 +35,7 @@ class Commercial_model extends CI_Model
         $this->nom_user   = $params['nom_user'];
         $this->mot_passe  = $params['mot_passe'];
 
-        $this->db->insert('commercial', $this);
+       return $this->db->insert('commercial', $this);
     }
 
     public function modifier_commercial($params)
@@ -49,12 +49,12 @@ class Commercial_model extends CI_Model
         $this->nom_user   = $params['nom_user'];
         $this->mot_passe  = $params['mot_passe'];
 
-        $this->db->update('entries', $this, array('id' => $params['id']));
+        return $this->db->update('entries', $this, array('id' => $params['id']));
     }
 
     public function supprimer_commercial($params)
     {
-        $this->nom_prenom = $params['nom_prenom']; // please read the below note
+        $this->nom_prenom = $params['nom_prenom'];
         $this->num_tel    = $params['num_tel'];
         $this->num_what   = $params['num_what'];
         $this->email      = $params['email'];
@@ -63,7 +63,15 @@ class Commercial_model extends CI_Model
         $this->nom_user   = $params['nom_user'];
         $this->mot_passe  = $params['mot_passe'];
 
-        $this->db ->delete('commercial',array('id' =>$params['id']));
+        return $this->db ->delete('commercial',array('id' =>$params['id']));
+    }
+
+    public function connexion($params)
+    {
+        $this->nom_user   = $params['nom_user'];
+        $this->mot_passe  = $params['mot_passe'];
+        $query = $this->db->get_where('mytable', array('nom_user' => $params['nom_user'] , 'nom_user' => $params['mot_passe']));
+        return $query->result();
     }
 
 }
