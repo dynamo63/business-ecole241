@@ -15,18 +15,18 @@ class Commercial_model extends CI_Model
 
     public function __construct()
     {
-        $this->load->database();
+        $this->load->database('local');
     }
 
     public function tous_les_commerciaux()
     {
-        $query = $this->db->get('commercial', );
+        $query = $this->db->get('commercial');
         return $query->result();
     }
 
     public function inserer_commercial($params)
     {
-        $this->nom_prenom = $params['nom_prenom']; // please read the below note
+        $this->nom_prenom = $params['nom_prenom'];
         $this->num_tel    = $params['num_tel'];
         $this->num_what   = $params['num_what'];
         $this->email      = $params['email'];
@@ -35,7 +35,7 @@ class Commercial_model extends CI_Model
         $this->nom_user   = $params['nom_user'];
         $this->mot_passe  = $params['mot_passe'];
 
-        $this->db->insert('commercial', $this);
+        return $this->db->insert('commercial', $this);
     }
 
     public function modifier_commercial($params)
